@@ -813,8 +813,8 @@ var app = (function () {
     			img = element("img");
     			if (img.src !== (img_src_value = "./img/" + (/*post*/ ctx[4].srcSmall || "3.png"))) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "hotdog");
-    			attr_dev(img, "class", "postCard__card svelte-etoue6");
-    			add_location(img, file, 55, 2, 1234);
+    			attr_dev(img, "class", "postCard__card svelte-xb1zc7");
+    			add_location(img, file, 55, 2, 1227);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -876,9 +876,9 @@ var app = (function () {
     		c: function create() {
     			div = element("div");
     			if (if_block) if_block.c();
-    			attr_dev(div, "class", "postCard svelte-etoue6");
+    			attr_dev(div, "class", "postCard svelte-xb1zc7");
     			attr_dev(div, "style", /*style*/ ctx[1]);
-    			add_location(div, file, 52, 0, 969);
+    			add_location(div, file, 52, 0, 962);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1272,8 +1272,8 @@ var app = (function () {
         },
         {
             id: 33,
-            srcSmall: "33.jpg",
-            srcLarge: "33.jpg",
+            srcSmall: "33.gif",
+            srcLarge: "33.gif",
             text: "En tout cas c'était très joli, et maintenant je sais prononcé Nyhavn"
         },
         {
@@ -1292,7 +1292,8 @@ var app = (function () {
             id: 36,
             srcSmall: "36.jpg",
             srcLarge: "36.jpg",
-            text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents ! \n Pour tout ça je te remercie Emm, je t'aime et je suis fier d'être en couple avec toi"
+            text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents !" +
+             "Pour tout ça je te remercie Emm, revoir toutes ces photos m'a rappelé pourquoi j'étais chaque jour heureux d'être avec toi. Je t'aime !"
         }
     ];
 
@@ -1306,7 +1307,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (126:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style="{`transform: rotate(${finalTransitions[index]}deg)`}"       legend="{post.id}"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>
+    // (133:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style="{`transform: rotate(${finalTransitions[index]}deg)`}"       legend="{post.id}"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>
     function create_default_slot(ctx) {
     	let t0_value = /*post*/ ctx[9] + "";
     	let t0;
@@ -1334,14 +1335,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(126:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style=\\\"{`transform: rotate(${finalTransitions[index]}deg)`}\\\"       legend=\\\"{post.id}\\\"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>",
+    		source: "(133:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style=\\\"{`transform: rotate(${finalTransitions[index]}deg)`}\\\"       legend=\\\"{post.id}\\\"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (125:1) {#each cards as post, index (index)}
+    // (132:1) {#each cards as post, index (index)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let current;
@@ -1424,14 +1425,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(125:1) {#each cards as post, index (index)}",
+    		source: "(132:1) {#each cards as post, index (index)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (137:0) {#if selected}
+    // (144:0) {#if selected}
     function create_if_block$1(ctx) {
     	let div1;
     	let div0;
@@ -1454,15 +1455,16 @@ var app = (function () {
     			t0 = space();
     			p = element("p");
     			t1 = text(t1_value);
-    			attr_dev(img, "class", "details__image svelte-bzz70s");
+    			attr_dev(img, "class", "details__image svelte-bu1tao");
     			if (img.src !== (img_src_value = `./img/${pictures[/*selected*/ ctx[0] - 1].srcLarge || "3.jpg"}`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$1, 142, 2, 2988);
-    			add_location(p, file$1, 143, 2, 3089);
-    			attr_dev(div0, "class", "details__content svelte-bzz70s");
-    			add_location(div0, file$1, 141, 1, 2955);
-    			attr_dev(div1, "class", "details svelte-bzz70s");
-    			add_location(div1, file$1, 137, 0, 2843);
+    			add_location(img, file$1, 149, 2, 3088);
+    			attr_dev(p, "class", "details__text svelte-bu1tao");
+    			add_location(p, file$1, 150, 2, 3189);
+    			attr_dev(div0, "class", "details__content svelte-bu1tao");
+    			add_location(div0, file$1, 148, 1, 3055);
+    			attr_dev(div1, "class", "details svelte-bu1tao");
+    			add_location(div1, file$1, 144, 0, 2943);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1508,7 +1510,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(137:0) {#if selected}",
+    		source: "(144:0) {#if selected}",
     		ctx
     	});
 
@@ -1551,10 +1553,10 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			attr_dev(button, "class", "drawButton svelte-bzz70s");
-    			add_location(button, file$1, 119, 0, 2362);
-    			attr_dev(div, "class", "grid svelte-bzz70s");
-    			add_location(div, file$1, 123, 0, 2433);
+    			attr_dev(button, "class", "drawButton svelte-bu1tao");
+    			add_location(button, file$1, 126, 0, 2462);
+    			attr_dev(div, "class", "grid svelte-bu1tao");
+    			add_location(div, file$1, 130, 0, 2533);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

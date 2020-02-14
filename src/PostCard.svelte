@@ -37,7 +37,7 @@
 	}
 	
 	.postCard__card {
-		background-color: darkMagenta;
+		background-color: #eee;
 		color: white;
 		display: flex;
 		align-items: center;

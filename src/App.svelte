@@ -90,6 +90,7 @@
 	.details__image {
 		max-width: 600px;
 		margin-bottom: 50px;
+		max-height: 67%;
 	}
 
 	.details__content {
@@ -108,6 +109,12 @@
 		background-image: linear-gradient(45deg, #3066ff, #00fff3);
     	color: firebrick;
     	font-size: 1.2em;
+	}
+
+	.details__text {
+		font-size: 2em;
+		margin: 1em 20%;
+		text-align: center;
 	}
 /* 
 	.drawbButton.is-shuffling {
@@ -141,7 +148,7 @@
 	 on:click={closeDetails}>
 	<div class="details__content">
 		<img class="details__image" src="{`./img/${postCards[selected - 1].srcLarge || '3.jpg'}`}" alt="">
-		<p>{postCards[selected - 1].text}</p>
+		<p class="details__text">{postCards[selected - 1].text}</p>
 	</div>
 	
 </div>

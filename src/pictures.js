@@ -198,8 +198,8 @@ const pictures = [
     },
     {
         id: 33,
-        srcSmall: "33.jpg",
-        srcLarge: "33.jpg",
+        srcSmall: "33.gif",
+        srcLarge: "33.gif",
         text: "En tout cas c'était très joli, et maintenant je sais prononcé Nyhavn"
     },
     {
@@ -218,7 +218,8 @@ const pictures = [
         id: 36,
         srcSmall: "36.jpg",
         srcLarge: "36.jpg",
-        text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents ! \n Pour tout ça je te remercie Emm, je t'aime et je suis fier d'être en couple avec toi"
+        text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents !" +
+         "Pour tout ça je te remercie Emm, revoir toutes ces photos m'a rappelé pourquoi j'étais chaque jour heureux d'être avec toi. Je t'aime !"
     }
 ]
 
