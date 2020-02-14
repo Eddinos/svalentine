@@ -79,7 +79,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 1;
-		background-color: white;
+		background-color: #ddd;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -89,14 +89,16 @@
 
 	.details__image {
 		max-width: 600px;
-		margin-bottom: 50px;
 		max-height: 67%;
+		border: solid 12px white;
+		border-bottom-width: 36px;
 	}
 
 	.details__content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 	}
 
 	.drawButton {
@@ -106,9 +108,12 @@
 		border-radius: 50%;
 		height: 100px;
 		width: 100px;
-		background-image: linear-gradient(45deg, #3066ff, #00fff3);
-    	color: firebrick;
-    	font-size: 1.2em;
+		background-image: linear-gradient(25deg, #1DDD77, #1C6FE3);
+    	color: white;
+		font-size: 1.2em;
+		cursor: pointer;
+		font-family: 'Montserrat',sans-serif;
+		border: none;
 	}
 
 	.details__text {

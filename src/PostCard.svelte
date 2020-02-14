@@ -34,6 +34,9 @@
 		align-self: center;
 		justify-self: center;
 		overflow: visible;
+		border: solid 12px white;
+		border-bottom-width: 36px;
+		cursor: pointer;
 	}
 	
 	.postCard__card {

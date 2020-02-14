@@ -24,13 +24,13 @@ const pictures = [
     },
     {
         id: 4,
-        srcSmall: "4.jpg",
+        srcSmall: "4s.jpg",
         srcLarge: "4.jpg",
         text: "Découvert une petite île méditerranéenne"
     },
     {
         id: 5,
-        srcSmall: "5.jpg",
+        srcSmall: "5s.jpg",
         srcLarge: "5.jpg",
         text: "Je suis allé voir des expositions lumineuses"
     },
@@ -42,7 +42,7 @@ const pictures = [
     },
     {
         id: 7,
-        srcSmall: "7.jpg",
+        srcSmall: "7s.jpg",
         srcLarge: "7.jpg",
         text: "Je suis allé au mariage de mes nouveau amis"
     },
@@ -66,13 +66,13 @@ const pictures = [
     },
     {
         id: 11,
-        srcSmall: "11.jpg",
+        srcSmall: "11s.jpg",
         srcLarge: "11.jpg",
         text: "J'ai fait des petits weekend de détente, peu importe la météo"
     },
     {
         id: 12,
-        srcSmall: "12.jpg",
+        srcSmall: "12s.jpg",
         srcLarge: "12.jpg",
         text: "Essayé 80% des restos parisiens"
     },
@@ -84,33 +84,33 @@ const pictures = [
     },
     {
         id: 14,
-        srcSmall: "14.jpg",
+        srcSmall: "14s.jpg",
         srcLarge: "14.jpg",
         text: "Comme mettre un sarong pour visiter des temples de toutes formes"
     },
     {
         id: 15,
-        srcSmall: "15.jpg",
+        srcSmall: "15s.jpg",
         srcLarge: "15.jpg",
-        text: "Ou travailler mes cuisses et mes jambes en montant des centaines de marches"
+        text: "Ou travailler mes cuisses et mes fesses en montant des centaines de marches"
     },
     {
         id: 16,
-        srcSmall: "16.jpg",
+        srcSmall: "16s.jpg",
         srcLarge: "16.jpg",
-        text: "Mais avec de superbes cascades en récompense"
+        text: "Mais avec des cascades en récompense, pas dégueu"
     },
     {
         id: 17,
-        srcSmall: "17.jpg",
+        srcSmall: "17s.jpg",
         srcLarge: "17.jpg",
-        text: "J'ai aussi traversé des rizières qui s'étendent à perte de vue"
+        text: "J'ai aussi traversé des rizières qui s'étendent à perte de vue, avec leurs animaux et leurs déesses du riz"
     },
     {
         id: 18,
         srcSmall: "18.jpg",
         srcLarge: "18.jpg",
-        text: "Admiré des paysages magnifique au rythme du soleil"
+        text: "Admiré des paysages magnifique au rythme du soleil, et fait de la balançoire"
     },
     {
         id: 19,
@@ -144,13 +144,13 @@ const pictures = [
     },
     {
         id: 24,
-        srcSmall: "24.jpg",
+        srcSmall: "24s.jpg",
         srcLarge: "24.jpg",
         text: "J'ai plongé dans la mer pour chercher némo, les autres poissons et sa pote la tortue"
     },
     {
         id: 25,
-        srcSmall: "25.jpg",
+        srcSmall: "25s.jpg",
         srcLarge: "25.jpg",
         text: "Même en France les découvertes furent nombreuses, au Sud..."
     },
@@ -162,7 +162,7 @@ const pictures = [
     },
     {
         id: 27,
-        srcSmall: "27.jpg",
+        srcSmall: "27s.jpg",
         srcLarge: "27.jpg",
         text: "J'ai fini par entrer dans une nouvelle décennie, en étant patient et en dansant un petit peu quand même"
     },
@@ -180,7 +180,7 @@ const pictures = [
     },
     {
         id: 30,
-        srcSmall: "30.jpg",
+        srcSmall: "30s.jpg",
         srcLarge: "30.jpg",
         text: "Le froid de la neige m'a donné envie de me réchauffer au Danemark"
     },
@@ -200,23 +200,23 @@ const pictures = [
         id: 33,
         srcSmall: "33.gif",
         srcLarge: "33.gif",
-        text: "En tout cas c'était très joli, et maintenant je sais prononcé Nyhavn"
+        text: "En tout cas c'était très joli, et maintenant je sais prononcer Nyhavn"
     },
     {
         id: 34,
-        srcSmall: "34.jpg",
+        srcSmall: "34s.jpg",
         srcLarge: "34.jpg",
         text: "Car j'ai bien pris le temps de m'instruire"
     },
     {
         id: 35,
-        srcSmall: "35.jpg",
+        srcSmall: "35s.jpg",
         srcLarge: "35.jpg",
-        text: "Pendant tout ce temps j'ai fait et reçu plus de bisous qu'il n'y a d'étoiles dans le ciel (je le sais car je les ai observé)"
+        text: "Pendant tout ce temps j'ai fait et reçu plus de bisous qu'il n'y a d'étoiles dans le ciel (je le sais car je les ai observées)"
     },
     {
         id: 36,
-        srcSmall: "36.jpg",
+        srcSmall: "36s.jpg",
         srcLarge: "36.jpg",
         text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents !" +
          "Pour tout ça je te remercie Emm, revoir toutes ces photos m'a rappelé pourquoi j'étais chaque jour heureux d'être avec toi. Je t'aime !"
