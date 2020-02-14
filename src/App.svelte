@@ -71,6 +71,16 @@
 		height: 100%;
 		overflow: hidden;
 	}
+
+	@media (max-width: 640px) {
+			.grid {
+				overflow-x: hidden;
+				overflow-y: auto;
+				grid-template-columns: 100%;
+				grid-auto-rows: 45%;
+				scroll-behavior: smooth;
+			}
+		}
 	
 	.details {
 		position: absolute;
@@ -85,10 +95,11 @@
 		justify-content: center;
 		flex-direction: column;
 		cursor: pointer;
+		z-index: 11;
 	}
 
 	.details__image {
-		max-width: 600px;
+		max-width: 60%;
 		max-height: 67%;
 		border: solid 12px white;
 		border-bottom-width: 36px;
@@ -114,6 +125,13 @@
 		cursor: pointer;
 		font-family: 'Montserrat',sans-serif;
 		border: none;
+		transition: all .7s ease-out;
+		background-size: 200%;
+		z-index: 10;
+	}
+
+	.drawButton:hover {
+		background-position: 100%;
 	}
 
 	.details__text {

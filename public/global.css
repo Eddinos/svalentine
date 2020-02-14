@@ -3,6 +3,11 @@ html, body {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+
+	@media (max-width: 640px) {
+		overflow-x: hidden;
+		overflow-y: auto
+	}
 }
 
 body {
@@ -12,6 +17,7 @@ body {
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	background-color: #0f1e24;
+	scroll-behavior: smooth;
 }
 
 a {
