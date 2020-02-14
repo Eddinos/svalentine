@@ -1080,21 +1080,219 @@ var app = (function () {
     const pictures = [
         {
             id: 1,
-            srcSmall: "",
+            srcSmall: "1.jpg",
             srcLarge: "1.jpg",
-            text: "salut"
+            text: "Depuis quelques temps, il se passe beaucoup de choses assez incroyables dans ma vie. J'ai commencé par découvrir un nouveau quartier..."
         },
         {
             id: 2,
-            srcSmall: "",
-            srcLarge: "",
-            text: "Hello"
+            srcSmall: "2.jpg",
+            srcLarge: "2.jpg",
+            text: "Je suis allé à un nouveau festival"
         },
         {
             id: 3,
-            srcSmall: "1s.jpg",
-            srcLarge: "3.jpg",
-            text: "Hola"
+            srcSmall: "3.gif",
+            srcLarge: "3.gif",
+            text: "J'ai navigué dans des canaux"
+        },
+        {
+            id: 4,
+            srcSmall: "4.jpg",
+            srcLarge: "4.jpg",
+            text: "Découvert une petite île méditerranéenne"
+        },
+        {
+            id: 5,
+            srcSmall: "5.jpg",
+            srcLarge: "5.jpg",
+            text: "Je suis allé voir des expositions lumineuses"
+        },
+        {
+            id: 6,
+            srcSmall: "6.jpg",
+            srcLarge: "6.jpg",
+            text: "Je me suis mis au roller derby, j'ai même vu un match au zénith !"
+        },
+        {
+            id: 7,
+            srcSmall: "7.jpg",
+            srcLarge: "7.jpg",
+            text: "Je suis allé au mariage de mes nouveau amis"
+        },
+        {
+            id: 8,
+            srcSmall: "8.jpg",
+            srcLarge: "8.jpg",
+            text: "J'ai fait du patin à glace à Stockholm"
+        },
+        {
+            id: 9,
+            srcSmall: "9.jpg",
+            srcLarge: "9.jpg",
+            text: "Visité Prague de bas..."
+        },
+        {
+            id: 10,
+            srcSmall: "10.jpg",
+            srcLarge: "10.jpg",
+            text: "en haut !"
+        },
+        {
+            id: 11,
+            srcSmall: "11.jpg",
+            srcLarge: "11.jpg",
+            text: "J'ai fait des petits weekend de détente, peu importe la météo"
+        },
+        {
+            id: 12,
+            srcSmall: "12.jpg",
+            srcLarge: "12.jpg",
+            text: "Essayé 80% des restos parisiens"
+        },
+        {
+            id: 13,
+            srcSmall: "13.jpg",
+            srcLarge: "13.jpg",
+            text: "J'ai aussi fait le meilleur voyage de ma vie, pendant lequel j'ai vécu des aventures tous les jours"
+        },
+        {
+            id: 14,
+            srcSmall: "14.jpg",
+            srcLarge: "14.jpg",
+            text: "Comme mettre un sarong pour visiter des temples de toutes formes"
+        },
+        {
+            id: 15,
+            srcSmall: "15.jpg",
+            srcLarge: "15.jpg",
+            text: "Ou travailler mes cuisses et mes jambes en montant des centaines de marches"
+        },
+        {
+            id: 16,
+            srcSmall: "16.jpg",
+            srcLarge: "16.jpg",
+            text: "Mais avec de superbes cascades en récompense"
+        },
+        {
+            id: 17,
+            srcSmall: "17.jpg",
+            srcLarge: "17.jpg",
+            text: "J'ai aussi traversé des rizières qui s'étendent à perte de vue"
+        },
+        {
+            id: 18,
+            srcSmall: "18.jpg",
+            srcLarge: "18.jpg",
+            text: "Admiré des paysages magnifique au rythme du soleil"
+        },
+        {
+            id: 19,
+            srcSmall: "19.jpg",
+            srcLarge: "19.jpg",
+            text: "Pris des risques en respirant du souffre, mais pas de trop près non plus, donc ça va"
+        },
+        {
+            id: 20,
+            srcSmall: "20.jpg",
+            srcLarge: "20.jpg",
+            text: "J'ai vu le jour se lever sur un volcan"
+        },
+        {
+            id: 21,
+            srcSmall: "21.gif",
+            srcLarge: "21.gif",
+            text: "Puis un autre"
+        },
+        {
+            id: 22,
+            srcSmall: "22.jpg",
+            srcLarge: "22.jpg",
+            text: "Heureusement j'ai pu aussi me relaxer"
+        },
+        {
+            id: 23,
+            srcSmall: "23.jpg",
+            srcLarge: "23.jpg",
+            text: "Sur des plages infinies avec un petit jus de coco, des chèvres, des singes et des vaches bien sûr"
+        },
+        {
+            id: 24,
+            srcSmall: "24.jpg",
+            srcLarge: "24.jpg",
+            text: "J'ai plongé dans la mer pour chercher némo, les autres poissons et sa pote la tortue"
+        },
+        {
+            id: 25,
+            srcSmall: "25.jpg",
+            srcLarge: "25.jpg",
+            text: "Même en France les découvertes furent nombreuses, au Sud..."
+        },
+        {
+            id: 26,
+            srcSmall: "26.jpg",
+            srcLarge: "26.jpg",
+            text: "Comme au Nord"
+        },
+        {
+            id: 27,
+            srcSmall: "27.jpg",
+            srcLarge: "27.jpg",
+            text: "J'ai fini par entrer dans une nouvelle décennie, en étant patient et en dansant un petit peu quand même"
+        },
+        {
+            id: 28,
+            srcSmall: "28.jpg",
+            srcLarge: "28.jpg",
+            text: "J'ai fait la connaissance d'une championne de ski"
+        },
+        {
+            id: 29,
+            srcSmall: "29.jpg",
+            srcLarge: "29.jpg",
+            text: "Avec qui j'ai bravé les pistes les plus dangereuses"
+        },
+        {
+            id: 30,
+            srcSmall: "30.jpg",
+            srcLarge: "30.jpg",
+            text: "Le froid de la neige m'a donné envie de me réchauffer au Danemark"
+        },
+        {
+            id: 31,
+            srcSmall: "31.jpg",
+            srcLarge: "31.jpg",
+            text: "En mangeant un petit hotdog, parce qu'il y avait plus de pain pour les gros, mais c'était déjà pas mal"
+        },
+        {
+            id: 32,
+            srcSmall: "32.jpg",
+            srcLarge: "32.jpg",
+            text: "C'était aussi l'occasion de faire des échanges culturels avec les corbeaux locaux"
+        },
+        {
+            id: 33,
+            srcSmall: "33.jpg",
+            srcLarge: "33.jpg",
+            text: "En tout cas c'était très joli, et maintenant je sais prononcé Nyhavn"
+        },
+        {
+            id: 34,
+            srcSmall: "34.jpg",
+            srcLarge: "34.jpg",
+            text: "Car j'ai bien pris le temps de m'instruire"
+        },
+        {
+            id: 35,
+            srcSmall: "35.jpg",
+            srcLarge: "35.jpg",
+            text: "Pendant tout ce temps j'ai fait et reçu plus de bisous qu'il n'y a d'étoiles dans le ciel (je le sais car je les ai observé)"
+        },
+        {
+            id: 36,
+            srcSmall: "36.jpg",
+            srcLarge: "36.jpg",
+            text: "Tous ces moments m'ont donné le sourire, c'est pourquoi il faut bien prendre soin de ses dents ! \n Pour tout ça je te remercie Emm, je t'aime et je suis fier d'être en couple avec toi"
         }
     ];
 
@@ -1103,14 +1301,14 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[8] = list[i];
-    	child_ctx[10] = i;
+    	child_ctx[9] = list[i];
+    	child_ctx[11] = i;
     	return child_ctx;
     }
 
-    // (124:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style="{`transform: rotate(${finalTransitions[index]}deg)`}"       legend="{post.id}"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>
+    // (126:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style="{`transform: rotate(${finalTransitions[index]}deg)`}"       legend="{post.id}"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>
     function create_default_slot(ctx) {
-    	let t0_value = /*post*/ ctx[8] + "";
+    	let t0_value = /*post*/ ctx[9] + "";
     	let t0;
     	let t1;
 
@@ -1124,7 +1322,7 @@ var app = (function () {
     			insert_dev(target, t1, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*cards*/ 2 && t0_value !== (t0_value = /*post*/ ctx[8] + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*cards*/ 2 && t0_value !== (t0_value = /*post*/ ctx[9] + "")) set_data_dev(t0, t0_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(t0);
@@ -1136,34 +1334,34 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(124:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style=\\\"{`transform: rotate(${finalTransitions[index]}deg)`}\\\"       legend=\\\"{post.id}\\\"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>",
+    		source: "(126:1) <PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}      style=\\\"{`transform: rotate(${finalTransitions[index]}deg)`}\\\"       legend=\\\"{post.id}\\\"       on:expand={() => handleCardExpansion(post.id)}       selected={selected} post={post}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (123:1) {#each cards as post, index (index)}
+    // (125:1) {#each cards as post, index (index)}
     function create_each_block(key_1, ctx) {
     	let first;
     	let current;
 
     	function expand_handler(...args) {
-    		return /*expand_handler*/ ctx[7](/*post*/ ctx[8], ...args);
+    		return /*expand_handler*/ ctx[8](/*post*/ ctx[9], ...args);
     	}
 
     	const postcard = new PostCard({
     			props: {
     				transitionparams: {
     					duration: 900,
-    					...origin(/*index*/ ctx[10]),
+    					...origin(/*index*/ ctx[11]),
     					easing: cubicOut,
-    					final: /*finalTransitions*/ ctx[3][/*index*/ ctx[10]]
+    					final: /*finalTransitions*/ ctx[3][/*index*/ ctx[11]]
     				},
-    				style: `transform: rotate(${/*finalTransitions*/ ctx[3][/*index*/ ctx[10]]}deg)`,
-    				legend: /*post*/ ctx[8].id,
+    				style: `transform: rotate(${/*finalTransitions*/ ctx[3][/*index*/ ctx[11]]}deg)`,
+    				legend: /*post*/ ctx[9].id,
     				selected: /*selected*/ ctx[0],
-    				post: /*post*/ ctx[8],
+    				post: /*post*/ ctx[9],
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -1191,17 +1389,17 @@ var app = (function () {
 
     			if (dirty & /*cards*/ 2) postcard_changes.transitionparams = {
     				duration: 900,
-    				...origin(/*index*/ ctx[10]),
+    				...origin(/*index*/ ctx[11]),
     				easing: cubicOut,
-    				final: /*finalTransitions*/ ctx[3][/*index*/ ctx[10]]
+    				final: /*finalTransitions*/ ctx[3][/*index*/ ctx[11]]
     			};
 
-    			if (dirty & /*cards*/ 2) postcard_changes.style = `transform: rotate(${/*finalTransitions*/ ctx[3][/*index*/ ctx[10]]}deg)`;
-    			if (dirty & /*cards*/ 2) postcard_changes.legend = /*post*/ ctx[8].id;
+    			if (dirty & /*cards*/ 2) postcard_changes.style = `transform: rotate(${/*finalTransitions*/ ctx[3][/*index*/ ctx[11]]}deg)`;
+    			if (dirty & /*cards*/ 2) postcard_changes.legend = /*post*/ ctx[9].id;
     			if (dirty & /*selected*/ 1) postcard_changes.selected = /*selected*/ ctx[0];
-    			if (dirty & /*cards*/ 2) postcard_changes.post = /*post*/ ctx[8];
+    			if (dirty & /*cards*/ 2) postcard_changes.post = /*post*/ ctx[9];
 
-    			if (dirty & /*$$scope, cards*/ 2050) {
+    			if (dirty & /*$$scope, cards*/ 4098) {
     				postcard_changes.$$scope = { dirty, ctx };
     			}
 
@@ -1226,14 +1424,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(123:1) {#each cards as post, index (index)}",
+    		source: "(125:1) {#each cards as post, index (index)}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (135:0) {#if selected}
+    // (137:0) {#if selected}
     function create_if_block$1(ctx) {
     	let div1;
     	let div0;
@@ -1256,15 +1454,15 @@ var app = (function () {
     			t0 = space();
     			p = element("p");
     			t1 = text(t1_value);
-    			attr_dev(img, "class", "details__image svelte-d3r1il");
+    			attr_dev(img, "class", "details__image svelte-bzz70s");
     			if (img.src !== (img_src_value = `./img/${pictures[/*selected*/ ctx[0] - 1].srcLarge || "3.jpg"}`)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "");
-    			add_location(img, file$1, 140, 2, 2914);
-    			add_location(p, file$1, 141, 2, 3015);
-    			attr_dev(div0, "class", "details__content svelte-d3r1il");
-    			add_location(div0, file$1, 139, 1, 2881);
-    			attr_dev(div1, "class", "details svelte-d3r1il");
-    			add_location(div1, file$1, 135, 0, 2769);
+    			add_location(img, file$1, 142, 2, 2988);
+    			add_location(p, file$1, 143, 2, 3089);
+    			attr_dev(div0, "class", "details__content svelte-bzz70s");
+    			add_location(div0, file$1, 141, 1, 2955);
+    			attr_dev(div1, "class", "details svelte-bzz70s");
+    			add_location(div1, file$1, 137, 0, 2843);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1310,7 +1508,7 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(135:0) {#if selected}",
+    		source: "(137:0) {#if selected}",
     		ctx
     	});
 
@@ -1328,7 +1526,7 @@ var app = (function () {
     	let current;
     	let dispose;
     	let each_value = /*cards*/ ctx[1];
-    	const get_key = ctx => /*index*/ ctx[10];
+    	const get_key = ctx => /*index*/ ctx[11];
     	validate_each_keys(ctx, each_value, get_each_context, get_key);
 
     	for (let i = 0; i < each_value.length; i += 1) {
@@ -1353,10 +1551,10 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			attr_dev(button, "class", "drawButton svelte-d3r1il");
-    			add_location(button, file$1, 117, 0, 2288);
-    			attr_dev(div, "class", "grid svelte-d3r1il");
-    			add_location(div, file$1, 121, 0, 2359);
+    			attr_dev(button, "class", "drawButton svelte-bzz70s");
+    			add_location(button, file$1, 119, 0, 2362);
+    			attr_dev(div, "class", "grid svelte-bzz70s");
+    			add_location(div, file$1, 123, 0, 2433);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1474,6 +1672,7 @@ var app = (function () {
     	let selected = false;
     	let cards = [];
     	let counter = 0;
+    	let nextPage = false;
 
     	function drawCards() {
     		// if (cards.length === 0) {
@@ -1487,12 +1686,13 @@ var app = (function () {
     			return;
     		}
 
-    		if (counter === 9) {
+    		if (counter % 9 === 0 && counter !== 0 && !nextPage) {
     			$$invalidate(1, cards = []);
-    			counter++;
+    			nextPage = true;
     		} else {
     			$$invalidate(1, cards = [...cards, pictures[counter]]);
     			counter++;
+    			nextPage = false;
     		}
     	}
 
@@ -1517,6 +1717,7 @@ var app = (function () {
     		if ("selected" in $$props) $$invalidate(0, selected = $$props.selected);
     		if ("cards" in $$props) $$invalidate(1, cards = $$props.cards);
     		if ("counter" in $$props) counter = $$props.counter;
+    		if ("nextPage" in $$props) nextPage = $$props.nextPage;
     	};
 
     	return [
@@ -1527,6 +1728,7 @@ var app = (function () {
     		handleCardExpansion,
     		closeDetails,
     		counter,
+    		nextPage,
     		expand_handler
     	];
     }

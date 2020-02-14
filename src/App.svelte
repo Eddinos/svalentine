@@ -8,6 +8,7 @@
 	let selected = false
 	let cards = []
 	let counter = 0
+	let nextPage = false
 	
 	function drawCards () {
 		// if (cards.length === 0) {
@@ -22,12 +23,13 @@
 			return
 		}
 
-		if (counter === 9) {
+		if (counter%9 === 0 && counter !== 0 && !nextPage) {
 			cards = []
-			counter++
+			nextPage = true
 		} else {
 			cards = [...cards, postCards[counter]]
 			counter++
+			nextPage = false
 		}
 		
 	}
@@ -77,7 +79,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 1;
-		background-color: transparent;
+		background-color: white;
 		display: flex;
 		align-items: center;
 		justify-content: center;
