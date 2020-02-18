@@ -55,10 +55,12 @@
 
 	function handleCardExpansion (postCardId) {
 		selected = postCardId; 
+		document.body.classList.add('is-bg');
 	}
 
 	function closeDetails () {
 		selected = null;
+		document.body.classList.remove('is-bg');
 	}
 </script>
 
@@ -70,17 +72,8 @@
 		grid-auto-rows: 33%;
 		height: 100%;
 		overflow: hidden;
+		transition: all .5s ease-out;
 	}
-
-	@media (max-width: 640px) {
-			.grid {
-				overflow-x: hidden;
-				overflow-y: auto;
-				grid-template-columns: 100%;
-				grid-auto-rows: 45%;
-				scroll-behavior: smooth;
-			}
-		}
 	
 	.details {
 		position: absolute;
@@ -89,7 +82,7 @@
 		height: 100%;
 		width: 100%;
 		opacity: 1;
-		background-color: #ddd;
+		background-color: rgba(41, 42, 43, .85);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -99,8 +92,8 @@
 	}
 
 	.details__image {
-		max-width: 60%;
-		max-height: 67%;
+		max-width: 80vw;
+		max-height: 67vh;
 		border: solid 12px white;
 		border-bottom-width: 36px;
 	}
@@ -138,6 +131,22 @@
 		font-size: 2em;
 		margin: 1em 20%;
 		text-align: center;
+		color: #eee;
+	}
+
+	@media (max-width: 640px) {
+		.grid {
+			overflow-x: hidden;
+			overflow-y: auto;
+			grid-template-columns: 100%;
+			grid-auto-rows: 45%;
+			scroll-behavior: smooth;
+		}
+
+		.details__text {
+			margin: 1em 3%;
+			font-size: 1.5em;
+		}
 	}
 /* 
 	.drawbButton.is-shuffling {
