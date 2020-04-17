@@ -4,6 +4,7 @@
 	import {send, receive} from './crossfade.js'
 	import PostCard from './PostCard.svelte'
 	import postCards from './pictures.js'
+	import axios from 'axios'
 
 	let selected = false
 	let cards = []
@@ -16,6 +17,8 @@
 		// } else {
 		// 	cards = []
 		// }
+
+		axios.get('/.netlify/functions/pictures').then(console.log)
 
 		if (counter === postCards.length) {
 			cards = []
