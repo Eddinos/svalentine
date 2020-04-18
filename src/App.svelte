@@ -14,7 +14,10 @@
 	let postCards = [];
 
 	onMount( async function () {
-		const { photosList } = await axios.get('https://dazzling-colden-97b082.netlify.app/.netlify/functions/pictures')
+		console.log('eho')
+		const { photosList } = await axios.get('/.netlify/functions/pictures')
+
+		console.log(photosList)
 
 		postCards = photosList.map((photo, index) => ({
 			id: index,
