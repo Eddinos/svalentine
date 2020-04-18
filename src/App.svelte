@@ -15,6 +15,7 @@
 
 	onMount( function () {
 		axios.get('/.netlify/functions/pictures').then(data => {
+			debugger;
 			postCards = data.photosList.map((photo, index) => ({
 			id: index,
 			srcSmall: photo.small,
