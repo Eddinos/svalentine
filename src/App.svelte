@@ -10,6 +10,7 @@
 	let cards = []
 	let counter = 0
 	let nextPage = false
+	let postCards = [];
 	
 	async function drawCards () {
 		// if (cards.length === 0) {
@@ -20,7 +21,7 @@
 
 		const { photosList } = axios.get('/.netlify/functions/pictures')
 
-		let postCards = photosList.map((photo, index) => ({
+		postCards = photosList.map((photo, index) => ({
 			id: index,
 			srcSmall: photo.small,
 			srcLarge: photo.origin
