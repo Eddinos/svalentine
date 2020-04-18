@@ -13,8 +13,8 @@
 	let nextPage = false
 	let postCards = [];
 
-	onMount( function () {
-		const { photosList } = axios.get('https://dazzling-colden-97b082.netlify.app/.netlify/functions/pictures')
+	onMount( async function () {
+		const { photosList } = await axios.get('https://dazzling-colden-97b082.netlify.app/.netlify/functions/pictures')
 
 		postCards = photosList.map((photo, index) => ({
 			id: index,
