@@ -3,7 +3,7 @@
 	import {fade, fly} from 'svelte/transition'
 	import {send, receive} from './crossfade.js'
 	import PostCard from './PostCard.svelte'
-	import postCards from './pictures.js'
+	// import postCards from './pictures.js'
 	import axios from 'axios'
 
 	let selected = false
@@ -11,14 +11,20 @@
 	let counter = 0
 	let nextPage = false
 	
-	function drawCards () {
+	async function drawCards () {
 		// if (cards.length === 0) {
 		// 	cards = [1,2,3,4,5,6,7,8,9]
 		// } else {
 		// 	cards = []
 		// }
 
-		axios.get('/.netlify/functions/pictures').then(console.log)
+		const { photosList } = axios.get('/.netlify/functions/pictures')
+
+		let postCards = photosList.map((photo, index) => ({
+			id: index,
+			srcSmall: photo.small,
+			srcLarge: photo.origin
+		}))
 
 		if (counter === postCards.length) {
 			cards = []
