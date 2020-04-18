@@ -5,27 +5,30 @@
 	import PostCard from './PostCard.svelte'
 	// import postCards from './pictures.js'
 	import axios from 'axios'
+	import { onMount } from 'svelte'
 
 	let selected = false
 	let cards = []
 	let counter = 0
 	let nextPage = false
 	let postCards = [];
-	
-	async function drawCards () {
-		// if (cards.length === 0) {
-		// 	cards = [1,2,3,4,5,6,7,8,9]
-		// } else {
-		// 	cards = []
-		// }
 
-		const { photosList } = await axios.get('/.netlify/functions/pictures')
+	onMount( function () {
+		const { photosList } = axios.get('https://dazzling-colden-97b082.netlify.app/.netlify/functions/pictures')
 
 		postCards = photosList.map((photo, index) => ({
 			id: index,
 			srcSmall: photo.small,
 			srcLarge: photo.origin
 		}))
+	})
+	
+	function drawCards () {
+		// if (cards.length === 0) {
+		// 	cards = [1,2,3,4,5,6,7,8,9]
+		// } else {
+		// 	cards = []
+		// }
 
 		if (counter === postCards.length) {
 			cards = []
