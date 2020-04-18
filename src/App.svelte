@@ -13,17 +13,14 @@
 	let nextPage = false
 	let postCards = [];
 
-	onMount( async function () {
-		console.log('eho')
-		const { photosList } = await axios.get('/.netlify/functions/pictures')
-
-		console.log(photosList)
-
-		postCards = photosList.map((photo, index) => ({
+	onMount( function () {
+		axios.get('/.netlify/functions/pictures').then(data => {
+			postCards = data.photosList.map((photo, index) => ({
 			id: index,
 			srcSmall: photo.small,
 			srcLarge: photo.origin
 		}))
+		})
 	})
 	
 	function drawCards () {
