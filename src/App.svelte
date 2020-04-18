@@ -19,7 +19,7 @@
 		// 	cards = []
 		// }
 
-		const { photosList } = axios.get('/.netlify/functions/pictures')
+		const { photosList } = await axios.get('/.netlify/functions/pictures')
 
 		postCards = photosList.map((photo, index) => ({
 			id: index,
