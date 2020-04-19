@@ -189,7 +189,8 @@
 			  style="{`transform: rotate(${finalTransitions[index]}deg)`}" 
 			  legend="{post.id}" 
 			  on:expand={() => handleCardExpansion(post.id)} 
-			  selected={selected} post={post}>
+			  selected={selected} 
+			  post={post}>
 		{post}
 	</PostCard>
 	
@@ -202,7 +203,7 @@
 	 out:send={{key: selected}} 
 	 on:click={closeDetails}>
 	<div class="details__content">
-		<img class="details__image" src="{postCards.find(p => p.id === selected - 1).srcLarge}" alt="">
+		<img class="details__image" src="{postCards.find(p => p.id === selected).srcLarge}" alt="">
 		<!-- <p class="details__text">{postCards.find(p => p.id === selected - 1).text || ''}</p> -->
 	</div>
 	
