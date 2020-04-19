@@ -15,11 +15,11 @@
 
 	onMount( function () {
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
-			postCards = data.photosList.map((photo, index) => ({
-				id: index,
+			postCards = shuffleArray(data.photosList.map((photo, index) => ({
+				id: index + 1,
 				srcSmall: photo.small,
 				srcLarge: photo.origin
-			}))
+			})))
 		})
 	})
 
@@ -202,8 +202,8 @@
 	 out:send={{key: selected}} 
 	 on:click={closeDetails}>
 	<div class="details__content">
-		<img class="details__image" src="{postCards[selected].srcLarge}" alt="">
-		<p class="details__text">{postCards[selected].text || ''}</p>
+		<img class="details__image" src="{postCards.find(p => p.id === selected - 1).srcLarge}" alt="">
+		<!-- <p class="details__text">{postCards.find(p => p.id === selected - 1).text || ''}</p> -->
 	</div>
 	
 </div>
