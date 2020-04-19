@@ -15,12 +15,11 @@
 
 	onMount( function () {
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
-			debugger
-			postCards = shuffleArray(data.photosList.map((photo, index) => ({
+			postCards = data.photosList.map((photo, index) => ({
 				id: index,
 				srcSmall: photo.small,
 				srcLarge: photo.origin
-			})))
+			}))
 		})
 	})
 
