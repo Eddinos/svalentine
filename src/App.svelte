@@ -16,13 +16,23 @@
 	onMount( function () {
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
 			debugger
-			postCards = data.photosList.map((photo, index) => ({
-				id: index,
+			postCards = shuffleArray(data.photosList.map((photo, index) => ({
+				id: index + 1,
 				srcSmall: photo.small,
 				srcLarge: photo.origin
-			}))
+			})))
 		})
 	})
+
+	function shuffleArray (array) {
+		let sorted = [...array];
+		for (let i = sorted.length - 1; i > 0; i--) {
+			let j = Math.floor(Math.random() * (i + 1));
+			[sorted[i], sorted[j]] = [sorted[j], sorted[i]];
+		}
+
+		return sorted;
+	}
 	
 	function drawCards () {
 		// if (cards.length === 0) {
@@ -193,7 +203,7 @@
 	 out:send={{key: selected}} 
 	 on:click={closeDetails}>
 	<div class="details__content">
-		<img class="details__image" src="{postCards[selected].srcLarge}" alt="">
+		<img class="details__image" src="{postCards[selected - 1].srcLarge}" alt="">
 		<p class="details__text">{postCards[selected - 1].text || ''}</p>
 	</div>
 	
