@@ -56,7 +56,7 @@
 <div class="postCard" on:click={handleClick} in:draw={transitionparams} out:draw={{...transitionparams, delay: legend%10*200}} style={style}>
 	{#if selected != legend}
 	<!-- <div class="postCard__card" in:receive={{key: selected}} out:send={{key: selected}}> -->
-		<img src={'./img/' + (post.srcSmall || '3.png')} alt="hotdog" in:receive|local={{key: selected}} out:send|local={{key: selected}} class="postCard__card">
+		<img src={post.srcSmall} alt="hotdog" in:receive|local={{key: selected}} out:send|local={{key: selected}} class="postCard__card">
 	<!-- </div> -->
 	{/if}
 </div>
