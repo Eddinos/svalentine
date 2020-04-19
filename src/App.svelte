@@ -14,13 +14,13 @@
 	let postCards = [];
 
 	onMount( function () {
-		axios.get('/.netlify/functions/pictures').then(data => {
-			debugger;
+		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
+			debugger
 			postCards = data.photosList.map((photo, index) => ({
-			id: index,
-			srcSmall: photo.small,
-			srcLarge: photo.origin
-		}))
+				id: index,
+				srcSmall: photo.small,
+				srcLarge: photo.origin
+			}))
 		})
 	})
 	
