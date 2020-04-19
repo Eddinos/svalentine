@@ -193,8 +193,8 @@
 	 out:send={{key: selected}} 
 	 on:click={closeDetails}>
 	<div class="details__content">
-		<img class="details__image" src="{postCards[selected - 1].srcLarge}" alt="">
-		<p class="details__text">{postCards[selected - 1].text}</p>
+		<img class="details__image" src="{postCards[selected].srcLarge}" alt="">
+		<p class="details__text">{postCards[selected - 1].text || ''}</p>
 	</div>
 	
 </div>
