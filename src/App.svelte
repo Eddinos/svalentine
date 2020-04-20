@@ -18,7 +18,8 @@
 			postCards = shuffleArray(data.photosList.map((photo, index) => ({
 				id: index + 1,
 				srcSmall: photo.small,
-				srcLarge: photo.origin
+				srcLarge: photo.origin,
+				title: photo.title
 			})))
 		})
 	})
