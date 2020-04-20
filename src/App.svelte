@@ -204,7 +204,7 @@
 	 on:click={closeDetails}>
 	<div class="details__content">
 		<img class="details__image" src="{postCards.find(p => p.id === selected).srcLarge}" alt="">
-		<!-- <p class="details__text">{postCards.find(p => p.id === selected - 1).text || ''}</p> -->
+		<p class="details__text">{postCards.find(p => p.id === selected).title || ''}</p>
 	</div>
 	
 </div>
