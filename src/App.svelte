@@ -184,6 +184,8 @@
 	Piocher
 </button>
 
+<a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://ed-photo-album.netlify.app/.netlify/functions/redirect&scope=user_profile,user_media&response_type=code">Connect</a>
+
 <div class="grid">
 	{#each cards as post, index (index)}
 	<PostCard transitionparams={{duration: 900, ...origin(index), easing: cubicOut, final: finalTransitions[index]}}
