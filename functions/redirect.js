@@ -13,7 +13,7 @@ exports.handler = async function(event, context, callback) {
         client_id: process.env.CLIENT_ID_INSTAGRAM,
         client_secret: process.env.CLIENT_SECRET_INSTAGRAM,
         grant_type: 'authorization_code',
-        redirect_uri: 'https://insta-photos-album.netlify.app/',
+        redirect_uri: 'https://insta-photos-album.netlify.app/.netlify/functions/redirect',
         code: queryStringParameters.code.replace('#_', '')
     }
     var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
