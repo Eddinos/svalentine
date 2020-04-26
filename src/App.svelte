@@ -40,7 +40,8 @@
 	})
 
 	async function getProfile () {
-		const res = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`)
+		let res = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`)
+		res = res.json()
 		console.log(res, 'res')
 		username = res.username
 	}
