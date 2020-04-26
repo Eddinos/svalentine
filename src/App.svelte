@@ -16,9 +16,12 @@
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
 
-		fetch(`/.netlify/functions/redirect${code}`).then(res => res.json()).then(res => {
-			console.log('response from auth', res)
-		})
+		if (code) {
+			fetch(`/.netlify/functions/redirect${code}`).then(res => res.json()).then(res => {
+				console.log('response from auth', res)
+			})
+		}
+		
 
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
 			postCards = shuffleArray(data.photosList.map((photo, index) => ({
