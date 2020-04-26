@@ -18,13 +18,10 @@ exports.handler = async function(event, context, callback) {
         }
     })
 
-    console.log(response)
-
     callback(null, {
         statusCode: 200,
-        body: JSON.stringify({
-            response,
-            params 
-        })
+        body: {
+            success: response
+        }
     })
 }
