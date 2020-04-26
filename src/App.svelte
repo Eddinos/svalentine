@@ -17,7 +17,7 @@
 		const code = window.location.search.replace('#_', '');
 
 		if (code) {
-			fetch(`./netlify/functions/redirect${code}`).then(res => res.json())
+			fetch(`./.netlify/functions/redirect${code}`).then(res => res.json())
 				.then(console.log)
 		}
 
