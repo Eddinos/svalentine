@@ -14,6 +14,12 @@
 	let postCards = [];
 
 	onMount( function () {
+		const code = window.location.search.replace('#_', '');
+
+		fetch(`/.netlify/functions/redirect${code}`).then(res => res.json()).then(res => {
+			console.log('response from auth', res)
+		})
+
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
 			postCards = shuffleArray(data.photosList.map((photo, index) => ({
 				id: index + 1,
@@ -184,7 +190,7 @@
 	Piocher
 </button>
 
-<a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://insta-photos-album.netlify.app/.netlify/functions/redirect&scope=user_profile,user_media&response_type=code">Connect</a>
+<a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://insta-photos-album.netlify.app/&scope=user_profile,user_media&response_type=code">Connect</a>
 
 <div class="grid">
 	{#each cards as post, index (index)}
