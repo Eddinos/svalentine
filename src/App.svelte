@@ -15,6 +15,7 @@
 	let token = null
 	let userId = null
 	let userName = null
+	let userMedia = []
 
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
@@ -27,6 +28,7 @@
 					userId = data.user_id
 				})
 				.then(getProfile)
+				.then(getMedia)
 		}
 
 		// fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
@@ -40,8 +42,13 @@
 	})
 
 	function getProfile () {
-		fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`).then(res => res.json())
-			.then(({username}) => userName = username)
+		return fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`).then(res => res.json())
+				.then(({username}) => userName = username)
+	}
+
+	function getMedia () {
+		return fetch(`https://graph.instagram.com/${userId}/media?fields=caption,id,media_type,media_url&access_token=${token}`).then(res => res.json())
+			.then(media => userMedia = media)
 	}
 
 	function shuffleArray (array) {
