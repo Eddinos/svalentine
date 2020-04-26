@@ -14,7 +14,7 @@
 	let postCards = []
 	let token = null
 	let userId = null
-	let username = null
+	let userName = null
 
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
@@ -39,11 +39,9 @@
 		// })
 	})
 
-	async function getProfile () {
-		let res = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`)
-		res = res.json()
-		console.log(res, 'res')
-		username = res.username
+	function getProfile () {
+		fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`).then(res => res.json())
+			.then(({username}) => userName = username)
 	}
 
 	function shuffleArray (array) {
@@ -206,8 +204,8 @@
 	Piocher
 </button>
 
-{#if username}
-<h2>{ username }</h2>
+{#if userName}
+<h2>{ userName }</h2>
 {/if}
 
 <a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://insta-photos-album.netlify.app/&scope=user_profile,user_media&response_type=code">Connect</a>
