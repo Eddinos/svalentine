@@ -53,7 +53,14 @@
 			.then(result => {
 				userMedia = userMedia.concat(result.data)
 				nextPageUrl = result.paging.next
-				console.log(userMedia);
+			})
+	}
+
+	function getNextMedia () {
+		return fetch(nextPageUrl).then(res => res.json())
+			.then(result => {
+				userMedia = userMedia.concat(result.data)
+				nextPageUrl = result.paging.next
 			})
 	}
 
@@ -64,7 +71,6 @@
 			srcLarge: medium.media_url,
 			title: medium.caption
 		}))
-		console.log('postCards', postCards)
 	}
 
 	function shuffleArray (array) {
@@ -93,6 +99,9 @@
 		if (counter%9 === 0 && counter !== 0 && !nextPage) {
 			cards = []
 			nextPage = true
+			if (nextPageUrl) {
+				getNextMedia()
+			}
 
 		} else {
 			cards = [...cards, postCards[counter]]
