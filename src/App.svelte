@@ -51,8 +51,7 @@
 	function getMedia () {
 		return fetch(`https://graph.instagram.com/${userId}/media?fields=caption,id,media_type,media_url,children&limit=18&access_token=${token}`).then(res => res.json())
 			.then(result => {
-				userMedia.concat(result.data)
-				console.log(result)
+				userMedia = userMedia.concat(result.data)
 				nextPageUrl = result.paging.next
 				console.log(userMedia);
 			})
