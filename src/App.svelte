@@ -101,6 +101,7 @@
 			nextPage = true
 			if (nextPageUrl) {
 				getNextMedia()
+					.then(setPostcards)
 			}
 
 		} else {
