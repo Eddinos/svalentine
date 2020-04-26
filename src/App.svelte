@@ -206,9 +206,9 @@
 
 {#if userName}
 <h2>{ userName }</h2>
-{/if}
-
+{:else}
 <a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://insta-photos-album.netlify.app/&scope=user_profile,user_media&response_type=code">Connect</a>
+{/if}
 
 <div class="grid">
 	{#each cards as post, index (index)}
