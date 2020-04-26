@@ -16,6 +16,7 @@
 	let userId = null
 	let userName = null
 	let userMedia = []
+	let nextPageUrl = ''
 
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
@@ -29,6 +30,7 @@
 				})
 				.then(getProfile)
 				.then(getMedia)
+				.then(setPostcards)
 		}
 
 		// fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
@@ -47,8 +49,22 @@
 	}
 
 	function getMedia () {
-		return fetch(`https://graph.instagram.com/${userId}/media?fields=caption,id,media_type,media_url&access_token=${token}`).then(res => res.json())
-			.then(media => userMedia = media)
+		return fetch(`https://graph.instagram.com/${userId}/media?fields=caption,id,media_type,media_url,children&limit=18&access_token=${token}`).then(res => res.json())
+			.then(result => {
+				userMedia.concat(result.data)
+				nextPageUrl = result.paging.next
+				console.log(userMedia);
+			})
+	}
+
+	function setPostcards () {
+		postCards = userMedia.map((medium, index) => ({
+			id: index + 1,
+			srcSmall: medium.media_url,
+			srcLarge: medium.media_url,
+			title: medium.caption
+		}))
+		console.log('postCards', postCards)
 	}
 
 	function shuffleArray (array) {
@@ -77,6 +93,7 @@
 		if (counter%9 === 0 && counter !== 0 && !nextPage) {
 			cards = []
 			nextPage = true
+
 		} else {
 			cards = [...cards, postCards[counter]]
 			counter++
