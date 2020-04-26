@@ -11,40 +11,25 @@
 	let cards = []
 	let counter = 0
 	let nextPage = false
-	let postCards = [];
+	let postCards = []
+	let flag = false
 
-	onMount(async function () {
+	onMount( function () {
 		const code = window.location.search.replace('#_', '');
 
-		if (code) {
-			const params = {
-				client_id: process.env.CLIENT_ID_INSTAGRAM,
-				client_secret: process.env.CLIENT_SECRET_INSTAGRAM,
-				grant_type: 'authorization_code',
-				redirect_uri: 'https://insta-photos-album.netlify.app/',
-				code
-			}
-			var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
-
-			const response = await fetch(`https://api.instagram.com/oauth/access_token?${queryString}`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/x-www-form-urlencoded'
-				}
-			})
-
-			console.log(response)
+		if (code && !flag) {
+			window.location.href = `/.netlify/functions/redirect${code}`
+			flag = true
 		}
-		
 
-		// fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
-		// 	postCards = shuffleArray(data.photosList.map((photo, index) => ({
-		// 		id: index + 1,
-		// 		srcSmall: photo.small,
-		// 		srcLarge: photo.origin,
-		// 		title: photo.title
-		// 	})))
-		// })
+		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
+			postCards = shuffleArray(data.photosList.map((photo, index) => ({
+				id: index + 1,
+				srcSmall: photo.small,
+				srcLarge: photo.origin,
+				title: photo.title
+			})))
+		})
 	})
 
 	function shuffleArray (array) {
