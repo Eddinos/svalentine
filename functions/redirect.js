@@ -12,7 +12,7 @@ exports.handler = async function(event, context, callback) {
     }
     var queryString = Object.keys(params).map(key => key + '=' + params[key]).join('&');
 
-    const response = await axios.post('https://api.instagram.com/oauth/access_token', queryString, {
+    const { data } = await axios.post('https://api.instagram.com/oauth/access_token', queryString, {
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -23,7 +23,7 @@ exports.handler = async function(event, context, callback) {
     callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-            sucess: true
+            data
         })
     })
 }
