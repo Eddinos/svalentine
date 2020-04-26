@@ -40,7 +40,9 @@
 	})
 
 	async function getProfile () {
-		({ username } = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`))
+		const res = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`)
+		console.log(res, 'res')
+		username = res.username
 	}
 
 	function shuffleArray (array) {
