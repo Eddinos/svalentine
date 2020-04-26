@@ -12,14 +12,13 @@
 	let counter = 0
 	let nextPage = false
 	let postCards = []
-	let flag = false
 
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
 
-		if (code && !flag) {
-			window.location.href = `/.netlify/functions/redirect${code}`
-			flag = true
+		if (code) {
+			fetch(`./netlify/functions/redirect?${code}`).then(res => res.json())
+				.then(console.log)
 		}
 
 		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
