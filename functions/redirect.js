@@ -18,12 +18,12 @@ exports.handler = async function(event, context, callback) {
         }
     })
 
-    console.log(response, 'response')
+    console.log(response.data, 'response')
 
     callback(null, {
         statusCode: 200,
         body: JSON.stringify({
-            data: response
+            data: response.data
         })
     })
 }
