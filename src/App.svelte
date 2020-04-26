@@ -12,24 +12,36 @@
 	let counter = 0
 	let nextPage = false
 	let postCards = []
+	let token = null
+	let userId = null
+	let username = null
 
 	onMount( function () {
 		const code = window.location.search.replace('#_', '');
 
 		if (code) {
-			fetch(`./.netlify/functions/redirect${code}`).then(res => res.json())
-				.then(console.log)
+			fetch(`./.netlify/functions/redirect${code}`)
+				.then(res => res.json())
+				.then(({ data }) => {
+					token = data.access_token,
+					userId = data.user_id
+				})
+				.then(getProfile)
 		}
 
-		fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
-			postCards = shuffleArray(data.photosList.map((photo, index) => ({
-				id: index + 1,
-				srcSmall: photo.small,
-				srcLarge: photo.origin,
-				title: photo.title
-			})))
-		})
+		// fetch('/.netlify/functions/pictures').then(res => res.json()).then(data => {
+		// 	postCards = shuffleArray(data.photosList.map((photo, index) => ({
+		// 		id: index + 1,
+		// 		srcSmall: photo.small,
+		// 		srcLarge: photo.origin,
+		// 		title: photo.title
+		// 	})))
+		// })
 	})
+
+	async function getProfile () {
+		({ username } = await fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`))
+	}
 
 	function shuffleArray (array) {
 		let sorted = [...array];
@@ -190,6 +202,10 @@
 <button class="drawButton" on:click="{drawCards}">
 	Piocher
 </button>
+
+{#if username}
+<h2>{ username }</h2>
+{/if}
 
 <a href="https://api.instagram.com/oauth/authorize?client_id=1412010978981320&redirect_uri=https://insta-photos-album.netlify.app/&scope=user_profile,user_media&response_type=code">Connect</a>
 
