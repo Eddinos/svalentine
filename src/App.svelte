@@ -18,15 +18,25 @@
 	let userMedia = []
 	let nextPageUrl = ''
 
-	onMount( function () {
+	onMount(async function () {
 		const code = window.location.search.replace('#_', '');
+
+		if (localStorage.userInfo) {
+			token = localStorage.userInfo.token
+			userId = localStorage.userInfo.userId
+
+			getProfile()
+			await getMedia()
+			setPostcards()
+		}
 
 		if (code) {
 			fetch(`./.netlify/functions/redirect${code}`)
 				.then(res => res.json())
 				.then(({ data }) => {
-					token = data.access_token,
+					token = data.access_token
 					userId = data.user_id
+					window.localStorage.setItem('userInfo', { token, userId })
 				})
 				.then(getProfile)
 				.then(getMedia)
@@ -45,7 +55,9 @@
 
 	function getProfile () {
 		return fetch(`https://graph.instagram.com/${userId}?fields=username&access_token=${token}`).then(res => res.json())
-				.then(({username}) => userName = username)
+				.then(({username}) => {
+					userName = username
+				})
 	}
 
 	function getMedia () {
