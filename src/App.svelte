@@ -21,9 +21,9 @@
 	onMount(async function () {
 		const code = window.location.search.replace('#_', '');
 
-		if (localStorage.userInfo) {
-			token = localStorage.userInfo.token
-			userId = localStorage.userInfo.userId
+		if (localStorage.token) {
+			token = localStorage.token
+			userId = localStorage.userId
 
 			getProfile()
 			await getMedia()
@@ -36,7 +36,8 @@
 				.then(({ data }) => {
 					token = data.access_token
 					userId = data.user_id
-					window.localStorage.setItem('userInfo', { token, userId })
+					window.localStorage.setItem('token', token)
+					window.localStorage.setItem('userId', userId)
 				})
 				.then(getProfile)
 				.then(getMedia)
